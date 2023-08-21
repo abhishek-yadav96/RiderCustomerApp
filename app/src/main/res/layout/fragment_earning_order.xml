@@ -1,0 +1,768 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".EarningOrderFragment">
+
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/order_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingVertical="@dimen/_5sdp"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:background="@drawable/vector__75_"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/order_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:fontFamily="@font/inter_semibold"
+                    android:text="Order"
+                    android:textColor="@color/black"
+                    android:textSize="24sp"
+                    app:layout_constraintBottom_toBottomOf="@id/image"
+                    app:layout_constraintStart_toEndOf="@+id/image"
+                    app:layout_constraintTop_toBottomOf="@id/image"
+                    app:layout_constraintTop_toTopOf="@id/image" />
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    android:fontFamily="@font/inter_semibold"
+                    android:text="@string/help"
+                    android:id="@+id/help_txt"
+                    android:textColor="#0F6FB5"
+                    android:textSize="12sp"
+                    android:drawablePadding="@dimen/_5sdp"
+                    app:layout_constraintTop_toTopOf="@id/order_txt"
+                    android:drawableStart="@drawable/vector__39_"
+                    app:layout_constraintBottom_toBottomOf="@id/order_txt"
+                    app:layout_constraintEnd_toEndOf="parent"
+                  />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#F1F1F1"
+        app:layout_constraintTop_toBottomOf="@id/order_layout"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+             app:layout_constraintTop_toBottomOf="@id/order_layout"
+        tools:layout_editor_absoluteX="33dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/service_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginTop="18dp"
+                android:fontFamily="@font/inter_semibold"
+                android:text="Service: Bike"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/km_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:fontFamily="@font/inter_semibold"
+                android:text="4.69 km"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@id/service_txt"
+                app:layout_constraintTop_toBottomOf="@id/service_txt" />
+
+            <TextView
+                android:id="@+id/min_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="11dp"
+                android:fontFamily="@font/inter_semibold"
+                android:text="9.37 min"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@id/km_txt"
+                app:layout_constraintStart_toEndOf="@id/km_txt"
+                app:layout_constraintTop_toBottomOf="@id/service_txt"
+                app:layout_constraintTop_toTopOf="@id/km_txt" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:fontFamily="@font/inter_semibold"
+                android:text="#RD1673096"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@id/service_txt"
+                app:layout_constraintStart_toStartOf="@id/appCompatButton2"
+                app:layout_constraintTop_toBottomOf="@id/service_txt"
+                app:layout_constraintTop_toTopOf="@id/service_txt" />
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/appCompatButton2"
+                android:layout_width="wrap_content"
+                android:layout_height="23dp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:background="@drawable/complete_drwable"
+                android:fontFamily="@font/inter_semibold"
+                android:gravity="center"
+                android:text="Completed"
+                android:textAllCaps="false"
+                android:textColor="@color/green"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@id/km_txt"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/km_txt" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/check_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_15sdp"
+                android:layout_marginTop="21dp"
+                android:background="@drawable/process_draw"
+                android:paddingVertical="20dp"
+                app:layout_constraintStart_toStartOf="@+id/km_txt"
+                app:layout_constraintTop_toBottomOf="@id/km_txt">
+
+                <ImageView
+                    android:id="@+id/ic_check"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:background="@drawable/ic_baseline_check_circle_24"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:id="@+id/dot_line_view"
+                    android:layout_width="100dp"
+                    android:layout_height="2dp"
+                    android:layout_marginStart="7dp"
+                    android:background="@drawable/view_dotline"
+                    app:layout_constraintBottom_toBottomOf="@id/ic_check"
+                    app:layout_constraintStart_toEndOf="@id/ic_check"
+                    app:layout_constraintTop_toTopOf="@id/ic_check" />
+
+
+                <ImageView
+                    android:id="@+id/ic_check1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:background="@drawable/ic_baseline_check_circle_24"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/dot_line_view"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:id="@+id/dot_line_view1"
+                    android:layout_width="100dp"
+                    android:layout_height="2dp"
+                    android:layout_marginStart="7dp"
+                    android:background="@drawable/view_dotline"
+                    app:layout_constraintBottom_toBottomOf="@id/ic_check1"
+                    app:layout_constraintStart_toEndOf="@id/ic_check1"
+                    app:layout_constraintTop_toTopOf="@id/ic_check1" />
+
+                <ImageView
+                    android:id="@+id/ic_check2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="7dp"
+                    android:layout_marginEnd="25dp"
+                    android:background="@drawable/ic_baseline_check_circle_24"
+                    app:layout_constraintBottom_toBottomOf="@id/dot_line_view1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/dot_line_view1" />
+
+
+                <TextView
+                    android:id="@+id/assigned_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="9dp"
+                    android:fontFamily="@font/inter_semibold"
+                    android:text="Assigned"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="@+id/ic_check"
+                    app:layout_constraintStart_toStartOf="@id/ic_check"
+                    app:layout_constraintTop_toBottomOf="@id/ic_check" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter_semibold"
+                    android:text="6:40 PM"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="@+id/assigned_txt"
+                    app:layout_constraintStart_toStartOf="@id/assigned_txt"
+                    app:layout_constraintTop_toBottomOf="@id/assigned_txt" />
+
+                <TextView
+                    android:id="@+id/started_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/inter_semibold"
+                    android:text="Started"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="@+id/ic_check1"
+                    app:layout_constraintStart_toStartOf="@+id/ic_check1"
+                    app:layout_constraintTop_toBottomOf="@id/ic_check1" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter_semibold"
+                    android:text="6:45 PM"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="@+id/started_txt"
+                    app:layout_constraintStart_toStartOf="@id/started_txt"
+                    app:layout_constraintTop_toBottomOf="@id/started_txt" />
+
+                <TextView
+                    android:id="@+id/completed_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="15dp"
+                    android:fontFamily="@font/inter_semibold"
+                    android:text="Completed"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="@+id/ic_check2"
+                    app:layout_constraintStart_toStartOf="@id/ic_check2"
+                    app:layout_constraintTop_toBottomOf="@id/ic_check2" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter_semibold"
+                    android:text="6:45 PM"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="@+id/completed_txt"
+                    app:layout_constraintStart_toStartOf="@id/completed_txt"
+                    app:layout_constraintTop_toBottomOf="@id/completed_txt" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/work_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/inter_semibold"
+                android:text="How this works?"
+                android:textColor="@color/blue"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@id/service_txt"
+                app:layout_constraintTop_toBottomOf="@id/check_layout" />
+
+            <TextView
+                android:id="@+id/earning_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:fontFamily="@font/inter_semibold"
+                android:text="Your order earnings is based on the distance and time\nprovided by Google. Always travel in the suggested route \nto avoid any mismatch"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@id/work_txt"
+                app:layout_constraintTop_toBottomOf="@id/work_txt" />
+
+            <TextView
+                android:id="@+id/location_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_25sdp"
+                android:fontFamily="@font/inter_semibold"
+                android:text="Location details"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@id/earning_txt"
+                app:layout_constraintTop_toBottomOf="@id/earning_txt" />
+
+            <ImageView
+                android:id="@+id/ic_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:background="@drawable/group_34049"
+                app:layout_constraintStart_toStartOf="@id/location_txt"
+                app:layout_constraintTop_toBottomOf="@id/location_txt" />
+
+            <TextView
+                android:id="@+id/pickup_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:fontFamily="@font/inter_semibold"
+                android:text="Pickup"
+                android:textColor="@color/orange"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@id/ic_location"
+                app:layout_constraintStart_toEndOf="@id/ic_location"
+                app:layout_constraintTop_toBottomOf="@id/location_txt"
+                app:layout_constraintTop_toTopOf="@id/ic_location" />
+
+            <TextView
+                android:id="@+id/chowringhee_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter_semibold"
+                android:text="Chowringhee"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@id/pickup_txt"
+                app:layout_constraintTop_toBottomOf="@id/pickup_txt" />
+
+            <TextView
+                android:id="@+id/address_txt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter_semibold"
+                android:text="SD-138B, Ahinsa Khand 1, Jaipuria Service Road, \nIndirapuram, Ghaziabad"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="@+id/earning_txt"
+                app:layout_constraintStart_toStartOf="@id/chowringhee_txt"
+                app:layout_constraintTop_toBottomOf="@id/chowringhee_txt" />
+
+            <ImageView
+                android:id="@+id/ic_watch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:background="@drawable/group_34047"
+                app:layout_constraintStart_toStartOf="@id/address_txt"
+                app:layout_constraintTop_toBottomOf="@id/address_txt" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_3sdp"
+                android:fontFamily="@font/inter_semibold"
+                android:text="0 Mins away"
+                android:textColor="@color/blue"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@id/ic_watch"
+                app:layout_constraintStart_toEndOf="@id/ic_watch"
+                app:layout_constraintTop_toBottomOf="@id/ic_watch"
+                app:layout_constraintTop_toTopOf="@id/ic_watch" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="2dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/view_dotline"
+                app:layout_constraintEnd_toEndOf="@+id/ic_location"
+                app:layout_constraintStart_toStartOf="@id/ic_location"
+                app:layout_constraintTop_toBottomOf="@id/ic_location" />
+
+
+            <ImageView
+                android:id="@+id/ic_location1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:background="@drawable/group_34049"
+                app:layout_constraintEnd_toEndOf="@+id/view"
+                app:layout_constraintStart_toStartOf="@id/view"
+                app:layout_constraintTop_toBottomOf="@id/view" />
+
+            <TextView
+                android:id="@+id/drop_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter_semibold"
+                android:text="Drop"
+                android:textColor="@color/orange"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@id/ic_location1"
+                app:layout_constraintStart_toEndOf="@id/ic_location1"
+                app:layout_constraintStart_toStartOf="@id/pickup_txt"
+                app:layout_constraintTop_toBottomOf="@id/ic_watch"
+                app:layout_constraintTop_toTopOf="@id/ic_location1" />
+
+            <TextView
+                android:id="@+id/chowringhee_txt1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter_semibold"
+                android:text="Chowringhee"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@id/drop_txt"
+                app:layout_constraintTop_toBottomOf="@id/drop_txt" />
+
+            <TextView
+                android:id="@+id/address_txt1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter_semibold"
+                android:text="SD-138B, Ahinsa Khand 1, Jaipuria Service Road, \nIndirapuram, Ghaziabad"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="@+id/address_txt"
+                app:layout_constraintStart_toStartOf="@id/chowringhee_txt1"
+                app:layout_constraintTop_toBottomOf="@id/chowringhee_txt1" />
+
+            <ImageView
+                android:id="@+id/ic_watch1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:background="@drawable/group_34047"
+                app:layout_constraintStart_toStartOf="@id/address_txt1"
+                app:layout_constraintTop_toBottomOf="@id/address_txt1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_3sdp"
+                android:fontFamily="@font/inter_semibold"
+                android:text="0 Mins away"
+                android:textColor="#0F6FB5"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@id/ic_watch1"
+                app:layout_constraintStart_toEndOf="@id/ic_watch1"
+                app:layout_constraintTop_toBottomOf="@id/ic_watch1"
+                app:layout_constraintTop_toTopOf="@id/ic_watch1" />
+
+            <TextView
+                android:id="@+id/trip_earning_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="44.35dp"
+                android:fontFamily="@font/inter_semibold"
+                android:text="Trip Earning"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@id/ic_location"
+                app:layout_constraintTop_toBottomOf="@id/ic_watch1" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/trip_earning_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_15sdp"
+                android:layout_marginTop="13dp"
+                android:layout_marginBottom="240dp"
+                android:background="@drawable/trip_earning_draw"
+                android:paddingVertical="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/trip_earning_txt"
+                app:layout_constraintTop_toBottomOf="@id/trip_earning_txt">
+
+                <TextView
+                    android:id="@+id/trip_fare_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:fontFamily="@font/inter_semibold"
+                    android:text="Total Trip Fare"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:fontFamily="@font/inter_semibold"
+                    android:text="₹49.0"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@id/trip_fare_txt"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/trip_fare_txt"
+                    app:layout_constraintTop_toTopOf="@id/trip_fare_txt" />
+
+                <TextView
+                    android:id="@+id/canceled_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:fontFamily="@font/inter_semibold"
+                    android:text="Tax Collected"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toStartOf="@id/trip_fare_txt"
+                    app:layout_constraintTop_toBottomOf="@id/trip_fare_txt" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:background="@drawable/group"
+                    app:layout_constraintBottom_toBottomOf="@id/canceled_txt"
+                    app:layout_constraintStart_toEndOf="@id/canceled_txt"
+                    app:layout_constraintTop_toBottomOf="@id/trip_fare_txt"
+                    app:layout_constraintTop_toTopOf="@id/canceled_txt" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:fontFamily="@font/inter_semibold"
+                    android:text="3.34"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="@id/canceled_txt"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/canceled_txt"
+                    app:layout_constraintTop_toTopOf="@id/canceled_txt" />
+
+                <View
+                    android:id="@+id/view1"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="19dp"
+                    android:background="@color/white"
+                    app:layout_constraintTop_toBottomOf="@id/canceled_txt" />
+
+                <TextView
+                    android:id="@+id/total_earning_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_9sdp"
+                    android:fontFamily="@font/inter_semibold"
+                    android:text="Total Earnings"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="@id/trip_fare_txt"
+                    app:layout_constraintTop_toBottomOf="@id/view1" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:fontFamily="@font/inter_semibold"
+                    android:text="₹37.4"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@id/total_earning_txt"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/total_earning_txt"
+                    app:layout_constraintTop_toTopOf="@id/total_earning_txt" />
+
+                <TextView
+                    android:id="@+id/bus_fare_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_7sdp"
+                    android:fontFamily="@font/inter_semibold"
+                    android:text="Base Fare"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toStartOf="@id/total_earning_txt"
+                    app:layout_constraintTop_toBottomOf="@id/total_earning_txt" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:fontFamily="@font/inter_semibold"
+                    android:text="₹16"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="@id/bus_fare_txt"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/bus_fare_txt"
+                    app:layout_constraintTop_toTopOf="@id/bus_fare_txt" />
+
+                <TextView
+                    android:id="@+id/time_fare_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:fontFamily="@font/inter_semibold"
+                    android:text="Time Fare (10.6 minutes)"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toStartOf="@id/bus_fare_txt"
+                    app:layout_constraintTop_toBottomOf="@id/bus_fare_txt" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:background="@drawable/group"
+                    app:layout_constraintBottom_toBottomOf="@id/time_fare_txt"
+                    app:layout_constraintStart_toEndOf="@id/time_fare_txt"
+                    app:layout_constraintTop_toBottomOf="@id/time_fare_txt"
+                    app:layout_constraintTop_toTopOf="@id/time_fare_txt" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:fontFamily="@font/inter_semibold"
+                    android:text="₹8.48"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="@id/time_fare_txt"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/time_fare_txt"
+                    app:layout_constraintTop_toTopOf="@id/time_fare_txt" />
+
+                <TextView
+                    android:id="@+id/distance_fare_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:fontFamily="@font/inter_semibold"
+                    android:text="Ditance Fare ( 4.69 kms)"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toStartOf="@id/time_fare_txt"
+                    app:layout_constraintTop_toBottomOf="@id/time_fare_txt" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:fontFamily="@font/inter_semibold"
+                    android:text="₹21.1"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="@id/distance_fare_txt"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/distance_fare_txt"
+                    app:layout_constraintTop_toTopOf="@id/distance_fare_txt" />
+
+                <ImageView
+                    android:id="@+id/dot_line_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="@dimen/_13sdp"
+                    android:layout_marginEnd="15dp"
+                    android:src="@drawable/dot_line_draw"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/distance_fare_txt" />
+
+                <TextView
+                    android:id="@+id/platform_charge_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:fontFamily="@font/inter_semibold"
+                    android:text="Platform Charge"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toStartOf="@id/distance_fare_txt"
+                    app:layout_constraintTop_toBottomOf="@id/dot_line_image" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:background="@drawable/group"
+                    app:layout_constraintBottom_toBottomOf="@id/platform_charge_txt"
+                    app:layout_constraintStart_toEndOf="@id/platform_charge_txt"
+                    app:layout_constraintTop_toBottomOf="@id/platform_charge_txt"
+                    app:layout_constraintTop_toTopOf="@id/platform_charge_txt" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:fontFamily="@font/inter_semibold"
+                    android:text="-₹8.2"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="@id/platform_charge_txt"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/platform_charge_txt"
+                    app:layout_constraintTop_toTopOf="@id/platform_charge_txt" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/cash_collect_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_14sdp"
+                android:fontFamily="@font/inter_semibold"
+                android:text="Cash collected from the customer"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@id/trip_earning_txt"
+                app:layout_constraintTop_toBottomOf="@id/trip_earning_layout" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:fontFamily="@font/inter_semibold"
+                android:text="₹49"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@id/cash_collect_txt"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cash_collect_txt"
+                app:layout_constraintTop_toTopOf="@id/cash_collect_txt" />
+
+            <TextView
+                android:id="@+id/amount_deducted_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:layout_marginBottom="40dp"
+                android:fontFamily="@font/inter_semibold"
+                android:text="Amount deducted from wallet"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@id/cash_collect_txt"
+                app:layout_constraintTop_toBottomOf="@id/cash_collect_txt" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:background="@drawable/group"
+                app:layout_constraintBottom_toBottomOf="@id/amount_deducted_txt"
+                app:layout_constraintStart_toEndOf="@id/amount_deducted_txt"
+                app:layout_constraintTop_toBottomOf="@id/amount_deducted_txt"
+                app:layout_constraintTop_toTopOf="@id/amount_deducted_txt" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:fontFamily="@font/inter_semibold"
+                android:text="-₹11.62"
+                android:textColor="@color/light_orange"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@id/amount_deducted_txt"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/amount_deducted_txt"
+                app:layout_constraintTop_toTopOf="@id/amount_deducted_txt" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

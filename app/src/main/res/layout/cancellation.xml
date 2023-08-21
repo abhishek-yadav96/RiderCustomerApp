@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E6E6E6"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="@dimen/_18sdp"
+        android:background="@drawable/cancellation_draw"
+        app:layout_constraintBottom_toBottomOf="parent"
+        >
+
+        <ImageView
+            android:id="@+id/ic_back"
+            android:layout_width="@dimen/_45sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:background="@drawable/group_33884"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Are you sure for cancellation?"
+            android:textSize="15sp"
+            android:layout_marginTop="@dimen/_21sdp"
+            android:fontFamily="@font/poppins_semibold"
+            android:id="@+id/cancellation_txt"
+            app:layout_constraintStart_toStartOf="@id/ic_back"
+            app:layout_constraintTop_toBottomOf="@id/ic_back"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:id="@+id/cancel_txt"
+            android:fontFamily="@font/poppins"
+            app:layout_constraintStart_toStartOf="@id/cancellation_txt"
+            app:layout_constraintTop_toBottomOf="@id/cancellation_txt"
+            android:textSize="13sp"
+            android:text="@string/text1"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="@dimen/_12sdp"
+            android:text="Confirm"
+            android:fontFamily="@font/poppins_semibold"
+            app:layout_constraintTop_toBottomOf="@id/cancel_txt"
+            android:id="@+id/confirm_button"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:background="@drawable/cancel_draw"
+            android:textAllCaps="false"
+            app:layout_constraintStart_toStartOf="@id/cancel_txt"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:textSize="15sp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

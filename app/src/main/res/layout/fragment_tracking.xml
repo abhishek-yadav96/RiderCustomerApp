@@ -1,0 +1,639 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".TrackingFragment">
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/live_order_layout"
+        android:padding="10dp"
+        android:elevation="10dp"
+        android:background="@color/white"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="21dp"
+            android:layout_marginStart="15dp"
+            android:id="@+id/image"
+            app:layout_constraintStart_toStartOf="parent"
+            android:background="@drawable/ic_baseline_arrow_back_ios_new_24"
+           />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Live Order"
+            android:textSize="24sp"
+            android:id="@+id/live_order_txt"
+            app:layout_constraintStart_toEndOf="@+id/image"
+            app:layout_constraintTop_toTopOf="@id/image"
+            app:layout_constraintBottom_toBottomOf="@id/image"
+            app:layout_constraintTop_toBottomOf="@id/image"
+            android:layout_marginStart="11dp"
+            android:fontFamily="@font/inter_semibold"
+            android:textColor="@color/black"
+            tools:ignore="HardcodedText,SpUsage" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+           app:layout_constraintEnd_toStartOf="@id/help_txt"
+            android:id="@+id/ic_support"
+            app:layout_constraintBottom_toBottomOf="@id/live_order_txt"
+            app:layout_constraintTop_toTopOf="@id/live_order_txt"
+            android:background="@drawable/vector__39_"
+            tools:ignore="ContentDescription" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/help"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textSize="12sp"
+            android:id="@+id/help_txt"
+            android:layout_marginEnd="15dp"
+            android:textColor="@color/blue"
+            android:fontFamily="@font/inter_semibold"
+            app:layout_constraintBottom_toBottomOf="@id/ic_support"
+            app:layout_constraintTop_toTopOf="@id/ic_support"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="47dp"
+            android:layout_height="20dp"
+            android:text="Active"
+            android:textSize="10sp"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:background="@drawable/active_draw"
+            android:fontFamily="@font/inter_semibold"
+            android:textColor="@color/blue"
+            android:layout_marginStart="7dp"
+            app:layout_constraintBottom_toBottomOf="@id/live_order_txt"
+            app:layout_constraintTop_toTopOf="@id/live_order_txt"
+            app:layout_constraintStart_toEndOf="@id/live_order_txt"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/live_order_layout"
+        android:layout_height="wrap_content">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="21dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/order_layout"
+        android:layout_marginHorizontal="15dp"
+        >
+
+        <ImageView
+            android:id="@+id/ic_order"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:src="@drawable/vector__38_"
+            android:background="@drawable/drawablebike"
+            android:padding="8dp"
+            app:layout_constraintBottom_toBottomOf="@id/date_txt"
+            app:layout_constraintTop_toTopOf="@id/order_no_txt"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Order No. 567483939"
+            android:textSize="14sp"
+            android:fontFamily="@font/inter_semibold"
+            android:textColor="@color/black"
+            android:layout_marginStart="11dp"
+            android:id="@+id/order_no_txt"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ic_order"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:fontFamily="@font/inter_semibold"
+            android:layout_height="wrap_content"
+            android:text="23/04/22 10:35 am"
+            android:textSize="14sp"
+            android:id="@+id/date_txt"
+            app:layout_constraintStart_toStartOf="@id/order_no_txt"
+            app:layout_constraintTop_toBottomOf="@id/order_no_txt"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/pickup_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/details_draw"
+                android:paddingVertical="15dp"
+                app:layout_constraintEnd_toEndOf="@+id/order_layout"
+                app:layout_constraintStart_toStartOf="@+id/order_layout"
+                app:layout_constraintTop_toBottomOf="@id/order_layout">
+
+                <ImageView
+                    android:id="@+id/ic_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:background="@drawable/group_34049"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/pickup_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16.34dp"
+                    android:fontFamily="@font/inter_semibold"
+                    android:text="Pickup"
+                    android:textColor="@color/orange"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@id/ic_location"
+                    app:layout_constraintStart_toEndOf="@id/ic_location"
+                    app:layout_constraintTop_toTopOf="@id/ic_location" />
+
+                <TextView
+                    android:id="@+id/details_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:fontFamily="@font/inter_semibold"
+                    android:text="Details"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@id/pickup_txt"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/pickup_txt" />
+
+                <TextView
+                    android:id="@+id/Chowringhee_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter_semibold"
+                    android:text="Chowringhee"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="@id/pickup_txt"
+                    app:layout_constraintTop_toBottomOf="@id/pickup_txt" />
+
+                <TextView
+                    android:id="@+id/address_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter_semibold"
+                    android:text="SD-138B, Ahinsa Khand 1,Jaipuria \nService Road, Indirapuram, Ghaziabad"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="@id/Chowringhee_txt"
+                    app:layout_constraintTop_toBottomOf="@id/Chowringhee_txt" />
+
+
+                <ImageView
+                    android:id="@+id/ic_watch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/group_34047"
+                    app:layout_constraintStart_toStartOf="@id/address_txt"
+                    app:layout_constraintTop_toBottomOf="@id/address_txt" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:fontFamily="@font/inter_semibold"
+                    android:text="0 Mins away"
+                    android:textColor="@color/blue"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="@id/ic_watch"
+                    app:layout_constraintStart_toEndOf="@id/ic_watch"
+                    app:layout_constraintTop_toBottomOf="@id/address_txt"
+                    app:layout_constraintTop_toTopOf="@id/ic_watch" />
+<ImageView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/ic_baseline_keyboard_arrow_down_24"
+    app:layout_constraintTop_toBottomOf="@id/ic_watch"
+    app:layout_constraintEnd_toEndOf="parent"
+    android:layout_marginEnd="15dp"
+    app:layout_constraintBottom_toBottomOf="@id/ic_watch"
+    app:layout_constraintTop_toTopOf="@id/ic_watch"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Start Navigation"
+                    android:textColor="@color/white"
+                    android:textAllCaps="false"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:fontFamily="@font/inter_semibold"
+                    android:background="@drawable/navigation_button"
+                    android:textSize="14sp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginHorizontal="15dp"
+                    app:layout_constraintTop_toBottomOf="@id/ic_watch"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/drop1_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/details_draw"
+                android:paddingVertical="15dp"
+                app:layout_constraintEnd_toEndOf="@+id/pickup_layout"
+                app:layout_constraintStart_toStartOf="@+id/pickup_layout"
+                app:layout_constraintTop_toBottomOf="@id/pickup_layout">
+
+                <ImageView
+                    android:id="@+id/ic_location1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:background="@drawable/group_34049"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/drop1_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16.34dp"
+                    android:fontFamily="@font/inter_semibold"
+                    android:text="Drop 1"
+                    android:textColor="@color/orange"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@id/ic_location1"
+                    app:layout_constraintStart_toEndOf="@id/ic_location1"
+                    app:layout_constraintTop_toTopOf="@id/ic_location1" />
+
+                <TextView
+                    android:id="@+id/details_txt1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Details"
+                    android:layout_marginEnd="15dp"
+                    android:fontFamily="@font/inter_semibold"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@id/drop1_txt"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/drop1_txt" />
+
+                <TextView
+                    android:id="@+id/Chowringhee_txt1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter_semibold"
+                    android:text="Chowringhee"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="@id/drop1_txt"
+                    app:layout_constraintTop_toBottomOf="@id/drop1_txt" />
+
+                <TextView
+                    android:id="@+id/address_txt1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter_semibold"
+                    android:text="SD-138B, Ahinsa Khand 1,Jaipuria \nService Road, Indirapuram, Ghaziabad"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="@id/Chowringhee_txt1"
+                    app:layout_constraintTop_toBottomOf="@id/Chowringhee_txt1" />
+
+
+                <ImageView
+                    android:id="@+id/ic_watch1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/group_34047"
+                    app:layout_constraintStart_toStartOf="@id/address_txt1"
+                    app:layout_constraintTop_toBottomOf="@id/address_txt1" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:fontFamily="@font/inter_semibold"
+                    android:text="0 Mins away"
+                    android:textColor="@color/blue"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="@id/ic_watch1"
+                    app:layout_constraintStart_toEndOf="@id/ic_watch1"
+                    app:layout_constraintTop_toBottomOf="@id/address_txt1"
+                    app:layout_constraintTop_toTopOf="@id/ic_watch1" />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_baseline_keyboard_arrow_down_24"
+                    app:layout_constraintTop_toBottomOf="@id/ic_watch1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginEnd="15dp"
+                    app:layout_constraintBottom_toBottomOf="@id/ic_watch1"
+                    app:layout_constraintTop_toTopOf="@id/ic_watch1"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Start Navigation"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textAllCaps="false"
+                    android:textAlignment="center"
+                    android:fontFamily="@font/inter_semibold"
+                    android:background="@drawable/navigation_button"
+                    android:textSize="14sp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginHorizontal="15dp"
+                    app:layout_constraintTop_toBottomOf="@id/ic_watch1"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/drop2_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/details_draw"
+                android:paddingVertical="15dp"
+                app:layout_constraintEnd_toEndOf="@+id/drop1_layout"
+                app:layout_constraintStart_toStartOf="@+id/order_layout"
+                app:layout_constraintTop_toBottomOf="@id/drop1_layout">
+
+                <ImageView
+                    android:id="@+id/ic_location2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:background="@drawable/group_34049"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/drop2_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16.34dp"
+                    android:fontFamily="@font/inter_semibold"
+                    android:text="Drop 2"
+                    android:textColor="@color/orange"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@id/ic_location2"
+                    app:layout_constraintStart_toEndOf="@id/ic_location2"
+                    app:layout_constraintTop_toTopOf="@id/ic_location2" />
+
+                <TextView
+                    android:id="@+id/details_txt2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:fontFamily="@font/inter_semibold"
+                    android:text="Details"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@id/drop2_txt"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/drop2_txt" />
+
+                <TextView
+                    android:id="@+id/Chowringhee_txt2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter_semibold"
+                    android:text="Chowringhee"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="@id/drop2_txt"
+                    app:layout_constraintTop_toBottomOf="@id/drop2_txt" />
+
+                <TextView
+                    android:id="@+id/address_txt2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter_semibold"
+                    android:text="SD-138B, Ahinsa Khand 1,Jaipuria \nService Road, Indirapuram, Ghaziabad"
+                    android:textColor="#686868"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="@id/Chowringhee_txt2"
+                    app:layout_constraintTop_toBottomOf="@id/Chowringhee_txt2" />
+
+
+                <ImageView
+                    android:id="@+id/ic_watch2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/group_34047"
+                    app:layout_constraintStart_toStartOf="@id/address_txt2"
+                    app:layout_constraintTop_toBottomOf="@id/address_txt2" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:fontFamily="@font/inter_semibold"
+                    android:text="0 Mins away"
+                    android:textColor="@color/blue"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="@id/ic_watch2"
+                    app:layout_constraintStart_toEndOf="@id/ic_watch2"
+                    app:layout_constraintTop_toBottomOf="@id/address_txt2"
+                    app:layout_constraintTop_toTopOf="@id/ic_watch2" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_baseline_keyboard_arrow_down_24"
+                    app:layout_constraintTop_toBottomOf="@id/ic_watch2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginEnd="15dp"
+                    app:layout_constraintBottom_toBottomOf="@id/ic_watch2"
+                    app:layout_constraintTop_toTopOf="@id/ic_watch2"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Start Navigation"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:textAllCaps="false"
+                    android:textAlignment="center"
+                    android:fontFamily="@font/inter_semibold"
+                    android:background="@drawable/navigation_button"
+                    android:textSize="14sp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginHorizontal="15dp"
+                    app:layout_constraintTop_toBottomOf="@id/ic_watch2"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/earning_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="21dp"
+                android:background="@drawable/expected_draw"
+                android:paddingVertical="15dp"
+                app:layout_constraintEnd_toEndOf="@+id/drop2_layout"
+                app:layout_constraintStart_toStartOf="@+id/drop2_layout"
+                app:layout_constraintTop_toBottomOf="@id/drop2_layout">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:fontFamily="@font/inter_semibold"
+                    android:text="Expected Earning"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="11.14dp"
+                    android:fontFamily="@font/inter_semibold"
+                    android:text="₹42.16"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="15dp"
+                android:id="@+id/distance_layout"
+                android:layout_marginHorizontal="15dp"
+                android:background="@drawable/pickup_draw"
+                app:layout_constraintEnd_toEndOf="@+id/earning_layout"
+                app:layout_constraintStart_toStartOf="@+id/earning_layout"
+                app:layout_constraintTop_toBottomOf="@id/earning_layout">
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Pickup"
+    android:id="@id/pickup"
+    android:fontFamily="@font/inter_semibold"
+    android:textSize="14sp"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    android:layout_marginStart="15dp"/>
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="0.04km"
+    app:layout_constraintBottom_toBottomOf="@id/pickup"
+    app:layout_constraintTop_toTopOf="@id/pickup"
+    android:fontFamily="@font/inter_semibold"
+    android:layout_marginEnd="11.14dp"
+    app:layout_constraintEnd_toEndOf="parent"
+    android:textSize="14sp"/>
+     <View
+         android:layout_width="match_parent"
+         android:layout_height="1dp"
+         android:background="#DFDFDF"
+         android:id="@+id/view"
+         android:layout_marginEnd="12dp"
+         app:layout_constraintEnd_toEndOf="parent"
+         android:layout_marginStart="15dp"
+         app:layout_constraintStart_toStartOf="parent"
+         android:layout_marginTop="9dp"
+         app:layout_constraintTop_toBottomOf="@id/pickup"/>
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="Drop"
+             android:id="@+id/drop"
+             android:layout_marginTop="10dp"
+             android:fontFamily="@font/inter_semibold"
+             app:layout_constraintTop_toBottomOf="@id/view"
+             android:textSize="14sp"
+             app:layout_constraintStart_toStartOf="@id/pickup"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3.82km"
+                    android:textSize="14sp"
+                    android:layout_marginEnd="11.14dp"
+                    app:layout_constraintBottom_toBottomOf="@id/drop"
+                    app:layout_constraintTop_toTopOf="@id/drop"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/drop"
+                    android:fontFamily="@font/inter_semibold"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/cancel_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:layout_marginHorizontal="15dp"
+                android:paddingVertical="20dp"
+                android:layout_marginBottom="23dp"
+                android:layout_marginTop="200dp"
+                android:background="@drawable/cancel_button"
+                android:fontFamily="@font/inter_semibold"
+                android:text="Cancel Ride"
+                android:textAllCaps="false"
+                android:textColor="@color/light_orange"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="@+id/track_button"
+                app:layout_constraintStart_toStartOf="@+id/track_button"
+                app:layout_constraintBottom_toTopOf="@id/track_button" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/track_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="200dp"
+                android:layout_marginBottom="140dp"
+                android:background="@drawable/track_button"
+                android:fontFamily="@font/inter_semibold"
+                android:gravity="center"
+                android:paddingVertical="20dp"
+                android:text="Track"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/earning_layout"
+                app:layout_constraintStart_toStartOf="@+id/earning_layout"
+                app:layout_constraintTop_toBottomOf="@id/distance_layout" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

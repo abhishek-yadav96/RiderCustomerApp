@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ProfileFragment">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="Click a picture of your package"
+        android:textColor="@color/black"
+        android:layout_marginTop="40dp"
+        android:id="@+id/like"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:fontFamily="@font/inter_semibold"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="20sp"/>
+
+    <ImageView
+        android:id="@+id/camearaimage"
+        android:layout_width="248dp"
+        android:layout_height="325dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/camera_draw"
+        app:layout_constraintEnd_toEndOf="@+id/like"
+        app:layout_constraintStart_toStartOf="@+id/like"
+        app:layout_constraintTop_toBottomOf="@id/like" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/click"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:background="@drawable/drawablebutton"
+        android:text="click"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/camearaimage"
+        app:layout_constraintStart_toStartOf="@+id/camearaimage"
+        app:layout_constraintTop_toBottomOf="@id/camearaimage" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:background="@drawable/buttondegins"
+        android:padding="15dp"
+        android:text="Submit"
+        android:id="@+id/submit_button"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/camearaimage" />
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:background="@drawable/border"
+        android:padding="15dp"
+        android:text="Upload Image"
+        android:layout_marginBottom="@dimen/_15sdp"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@id/submit_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/camearaimage" />
+</androidx.constraintlayout.widget.ConstraintLayout>

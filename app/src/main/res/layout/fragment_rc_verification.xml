@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_13sdp"
+                android:id="@+id/ic_back_icon"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:background="@drawable/vector__66_"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="RC Verification"
+                android:textSize="32dp"
+                android:id="@+id/pan"
+                android:fontFamily="@font/inter_semibold"
+                android:layout_marginStart="@dimen/_13sdp"
+                android:layout_marginTop="@dimen/_18sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ic_back_icon"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Vehicle Number"
+                android:textSize="14sp"
+                android:id="@+id/eneter_name_txt"
+                android:textColor="@color/black"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:fontFamily="@font/inter_semibold"
+                app:layout_constraintStart_toStartOf="@id/pan"
+                app:layout_constraintTop_toBottomOf="@id/pan"/>
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:id="@+id/panverfication"
+                android:background="@drawable/border"
+                android:singleLine="true"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:paddingVertical="@dimen/_15sdp"
+                android:layout_marginHorizontal="@dimen/_13sdp"
+                app:layout_constraintStart_toStartOf="@id/eneter_name_txt"
+                app:layout_constraintTop_toBottomOf="@id/eneter_name_txt"
+                android:paddingStart="18dp"
+                android:fontFamily="@font/inter_semibold"
+                android:textColor="#676767"
+                android:hint="DL2UI008898"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Upload Pan Number"
+                android:textSize="14sp"
+                android:id="@+id/pan_no_txt"
+                android:textColor="@color/black"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:fontFamily="@font/inter_semibold"
+                app:layout_constraintStart_toStartOf="@id/pan"
+                app:layout_constraintTop_toBottomOf="@id/panverfication"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/fourlayout"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="11dp"
+                android:background="@drawable/border"
+                app:layout_constraintEnd_toEndOf="@+id/panverfication"
+                app:layout_constraintStart_toStartOf="@+id/panverfication"
+                app:layout_constraintTop_toBottomOf="@id/pan_no_txt">
+
+                <ImageView
+                    android:id="@+id/image1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:background="@drawable/id_card_svgrepo_com_1__1_"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginBottom="10dp"
+                    android:id="@+id/image"
+                    android:background="@drawable/drawlayout"
+                    android:src="@drawable/ic_baseline_keyboard_arrow_up_24"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter_semibold"
+                    android:text="Upload front image"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="@+id/image1"
+                    app:layout_constraintStart_toStartOf="@+id/image1"
+                    app:layout_constraintTop_toBottomOf="@id/image" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Max size 200KB"
+                android:textSize="12sp"
+                android:textColor="#0F6FB5"
+                android:id="@+id/maxsize_text"
+                android:fontFamily="@font/inter_semibold"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginStart="@dimen/_13sdp"
+               app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/fourlayout"
+/>
+            <CheckBox
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="@dimen/_15sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginBottom="@dimen/_22sdp"
+                android:id="@+id/checkbox"
+                app:layout_constraintStart_toStartOf="@id/maxsize_text"
+                app:layout_constraintBottom_toTopOf="@id/verify_button1"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="I authorised Handover to verify my driving \nlicense from the authority"
+                app:layout_constraintStart_toEndOf="@id/checkbox"
+                app:layout_constraintTop_toBottomOf="@id/checkbox"
+                app:layout_constraintTop_toTopOf="@id/checkbox"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:fontFamily="@font/inter_semibold"
+                android:id="@+id/handover_txt"
+               />
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/verify_button1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_13sdp"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/buttondegins"
+                android:gravity="center"
+                android:paddingVertical="@dimen/_15sdp"
+                android:text="Verify &amp; Submit"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/checkbox" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".SelectVehicleFragment">
+
+    <ImageView
+        android:id="@+id/ic_back_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:background="@drawable/vector__66_"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/help"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="12sp"
+        android:drawablePadding="@dimen/_5sdp"
+        android:drawableStart="@drawable/vector__39_"
+        android:layout_marginEnd="@dimen/_15sdp"
+        android:textColor="#0F6FB5"
+        android:fontFamily="@font/inter_semibold"
+        app:layout_constraintBottom_toBottomOf="@id/ic_back_icon"
+        app:layout_constraintTop_toTopOf="@id/ic_back_icon"/>
+
+    <TextView
+        android:id="@+id/selectvechiles"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_40sdp"
+        android:fontFamily="@font/inter_semibold"
+        android:text="Select Vehicle"
+        android:textColor="@color/black"
+        android:textSize="32dp"
+        app:layout_constraintStart_toStartOf="@+id/ic_back_icon"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_15sdp"
+        android:layout_marginTop="32dp"
+        android:id="@+id/vechilelayout"
+        android:background="@drawable/select_vehicleborder"
+        app:layout_constraintStart_toStartOf="@+id/selectvechiles"
+        app:layout_constraintTop_toBottomOf="@id/selectvechiles">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/mainlayout5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/catergory_draw"
+            android:padding="@dimen/_15sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/icscooter"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_6sdp"
+                android:background="@drawable/vechilesdrawable"
+                android:src="@drawable/m001t0197_b_scooter_17jun22_removebg_preview_1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/vechile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_7sdp"
+                android:fontFamily="@font/inter_semibold"
+                android:text="Vehicles"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@id/icscooter"
+                app:layout_constraintTop_toTopOf="@id/icscooter" />
+
+            <TextView
+                android:id="@+id/selectcategory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter_semibold"
+                android:text="Tap to select category"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/icscooter"
+                app:layout_constraintStart_toStartOf="@id/vechile"
+                app:layout_constraintTop_toBottomOf="@id/vechile" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/languagelayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:padding="10dp"
+            app:layout_constraintTop_toBottomOf="@id/mainlayout5"
+         >
+
+            <ImageView
+                android:id="@+id/language_image"
+                android:layout_width="63dp"
+                android:layout_height="63dp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:background="@drawable/drawablebike"
+                android:padding="12dp"
+                android:src="@drawable/group_33998"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="@id/language_image"
+                app:layout_constraintStart_toEndOf="@id/language_image"
+                app:layout_constraintTop_toTopOf="@id/language_image">
+
+                <TextView
+                    android:id="@+id/handovercard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_11sdp"
+                    android:fontFamily="@font/inter_semibold"
+                    android:text="Motorcycle"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+
+                    app:layout_constraintStart_toEndOf="@id/language_image"
+                    app:layout_constraintTop_toTopOf="@id/language_image" />
+
+                <TextView
+                    android:id="@+id/best"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_11sdp"
+                    android:fontFamily="@font/inter_semibold"
+                    android:text="Best for delivering documents &amp; \ndaily essentials"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toStartOf="@id/handovercard"
+                    app:layout_constraintTop_toBottomOf="@id/handovercard" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_11sdp"
+                        android:background="@drawable/vector__38_" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_3sdp"
+                        android:text="0.4 0.4 0.4 Meter Up to 20 kg"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:id="@+id/wheelerlayout"
+            android:padding="10dp"
+            app:layout_constraintTop_toBottomOf="@id/languagelayout">
+
+            <ImageView
+                android:id="@+id/languageimage1"
+                android:layout_width="63dp"
+                android:layout_height="63dp"
+                android:src="@drawable/vector__8_"
+                android:background="@drawable/drawablebike"
+                android:padding="10dp"
+                android:layout_marginStart="@dimen/_13sdp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginStart="@dimen/_15sdp"
+                app:layout_constraintBottom_toBottomOf="@id/languageimage1"
+                app:layout_constraintStart_toEndOf="@id/languageimage1"
+                app:layout_constraintTop_toTopOf="@id/languageimage1"
+                >
+
+                <TextView
+                    android:id="@+id/handovercard1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_11sdp"
+                    android:fontFamily="@font/inter_semibold"
+                    android:text="3-Wheeler"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toEndOf="@id/language_image"
+                    app:layout_constraintTop_toTopOf="@id/language_image" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_11sdp"
+                    android:id="@+id/best1"
+                    android:fontFamily="@font/inter_semibold"
+                    android:text="Best for delivering garments &amp;\n household equipment"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toStartOf="@id/handovercard"
+                    app:layout_constraintTop_toBottomOf="@id/handovercard" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_11sdp"
+                        android:background="@drawable/vector__38_" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_3sdp"
+                        android:text="1.5 1.3 1.3 Meter Up to 500"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:id="@+id/tataaces"
+            android:padding="10dp"
+            app:layout_constraintTop_toBottomOf="@id/wheelerlayout">
+
+            <ImageView
+                android:id="@+id/icimage"
+                android:layout_width="63dp"
+                android:layout_height="63dp"
+                android:src="@drawable/vector__9_"
+                android:background="@drawable/drawablebike"
+                android:padding="10dp"
+                android:layout_marginStart="@dimen/_13sdp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:id="@+id/tataacelayout"
+                app:layout_constraintBottom_toBottomOf="@id/icimage"
+                app:layout_constraintStart_toEndOf="@id/icimage"
+                app:layout_constraintTop_toTopOf="@id/icimage"
+                >
+
+                <TextView
+                    android:id="@+id/tataace"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_11sdp"
+                    android:fontFamily="@font/inter_semibold"
+                    android:text="Tata Ace"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toEndOf="@id/language_image"
+                    app:layout_constraintTop_toTopOf="@id/language_image" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_11sdp"
+                    android:id="@+id/bestdeliverd"
+                    android:fontFamily="@font/inter_semibold"
+                    android:text="Best for delivering furniture &amp;\ncommercial goods"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toStartOf="@id/handovercard"
+                    app:layout_constraintTop_toBottomOf="@id/handovercard" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_11sdp"
+                        android:background="@drawable/vector__38_" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_3sdp"
+                        android:text="2.2 1.4 1.8 Meter Up to 750"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:id="@+id/tataaces1"
+            android:padding="10dp"
+            app:layout_constraintTop_toBottomOf="@id/tataaces">
+
+            <ImageView
+                android:id="@+id/icimage1"
+                android:layout_width="63dp"
+                android:layout_height="63dp"
+                android:src="@drawable/vector__62_"
+                android:background="@drawable/drawablebike"
+                android:padding="10dp"
+                android:layout_marginStart="@dimen/_13sdp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:id="@+id/tataacelayout1"
+                app:layout_constraintBottom_toBottomOf="@id/icimage1"
+                app:layout_constraintStart_toEndOf="@id/icimage1"
+                app:layout_constraintTop_toTopOf="@id/icimage1"
+                >
+
+                <TextView
+                    android:id="@+id/tataace1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_11sdp"
+                    android:fontFamily="@font/inter_semibold"
+                    android:text="8ft"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toEndOf="@id/language_image"
+                    app:layout_constraintTop_toTopOf="@id/language_image" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_11sdp"
+                    android:id="@+id/bestdeliverd1"
+                    android:fontFamily="@font/inter_semibold"
+                    android:text="Best for delivering office furniture &amp; \nheavy machinery"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toStartOf="@id/handovercard"
+                    app:layout_constraintTop_toBottomOf="@id/handovercard" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_11sdp"
+                        android:background="@drawable/vector__38_" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_3sdp"
+                        android:text="2.2 1.4 1.8 Meter Up to 750"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_15sdp"
+        android:layout_marginBottom="@dimen/_40sdp"
+        android:background="@drawable/buttondegins"
+        android:padding="15dp"
+        android:text="Submit"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/vechilelayout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/vechilelayout"
+        app:layout_constraintStart_toStartOf="@+id/vechilelayout" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".WalletPassbookFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/wallet_passbook_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:elevation="@dimen/_2sdp"
+        android:paddingVertical="@dimen/_10sdp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/earning"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:fontFamily="@font/inter_semibold"
+            android:text="Wallet Passbook"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/wallets_draw"
+            android:orientation="horizontal"
+            android:padding="@dimen/_3sdp"
+            app:layout_constraintStart_toStartOf="@+id/earning"
+            app:layout_constraintTop_toBottomOf="@id/earning">
+
+            <TextView
+                android:layout_width="97dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:background="@drawable/today_draw"
+                android:fontFamily="@font/inter_semibold"
+                android:gravity="center_horizontal"
+                android:paddingVertical="@dimen/_3sdp"
+                android:text="All"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_40sdp"
+                android:layout_weight="1"
+                android:fontFamily="@font/inter_semibold"
+                android:paddingVertical="@dimen/_3sdp"
+                android:text="Debit"
+                android:textColor="#7A7A7A"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_40sdp"
+                android:layout_weight="1"
+                android:fontFamily="@font/inter_semibold"
+                android:paddingVertical="@dimen/_3sdp"
+                android:text="Credit"
+                android:textColor="#7A7A7A"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="₹24.63"
+    android:layout_marginTop="@dimen/_20sdp"
+    android:id="@+id/rupees_txt"
+    android:textColor="@color/black"
+    android:fontFamily="@font/inter_semibold"
+    android:textSize="24sp"
+    app:layout_constraintStart_toStartOf="parent"
+    android:layout_marginStart="@dimen/_12sdp"
+    app:layout_constraintTop_toBottomOf="@id/wallet_passbook_layout"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Current Balance"
+        android:textSize="12sp"
+        android:fontFamily="@font/inter_semibold"
+        android:id="@+id/current_balance_txt"
+        app:layout_constraintStart_toStartOf="@id/rupees_txt"
+        app:layout_constraintTop_toBottomOf="@id/rupees_txt"/>
+    <View
+        android:id="@+id/view1"
+        android:layout_width="@dimen/_1sdp"
+        android:layout_height="@dimen/_20sdp"
+        android:background="#D9D9D9"
+        app:layout_constraintBottom_toBottomOf="@id/current_balance_txt"
+        app:layout_constraintTop_toTopOf="@id/rupees_txt"
+      app:layout_constraintTop_toBottomOf="@id/rupees_txt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="₹24.63"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/rupees_txt1"
+        android:textColor="@color/orange"
+        android:fontFamily="@font/inter_semibold"
+        android:textSize="24sp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        app:layout_constraintBottom_toBottomOf="@id/rupees_txt"
+       app:layout_constraintTop_toTopOf="@id/rupees_txt"
+        android:layout_marginStart="@dimen/_12sdp"
+        app:layout_constraintTop_toBottomOf="@id/rupees_txt"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Locked Balance"
+        android:textSize="12sp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/inter_semibold"
+        android:id="@+id/locked_balance_txt"
+        app:layout_constraintStart_toStartOf="@id/rupees_txt1"
+        app:layout_constraintTop_toBottomOf="@id/rupees_txt1"/>
+<View
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_1sdp"
+    app:layout_constraintTop_toBottomOf="@id/current_balance_txt"
+    android:background="#F1F1F1"
+    android:id="@+id/line_view"
+    android:layout_marginTop="@dimen/_18sdp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="From"
+        android:id="@+id/from_txt"
+        android:textSize="14sp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/inter_semibold"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="@dimen/_12sdp"
+        app:layout_constraintTop_toTopOf="@id/from_month_txt"
+        app:layout_constraintTop_toBottomOf="@id/from_month_txt"
+        app:layout_constraintBottom_toBottomOf="@id/from_month_txt"/>
+
+    <TextView
+        android:id="@+id/from_month_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:background="@drawable/allorder_draw"
+        android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_down_24"
+        android:fontFamily="@font/inter"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="@dimen/_3sdp"
+        android:text="DD/MM/YY"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@id/from_txt"
+        app:layout_constraintTop_toBottomOf="@id/line_view" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="To"
+        android:id="@+id/to_txts"
+        android:textSize="14sp"
+        android:textColor="@color/black"
+        android:layout_marginStart="@dimen/_9sdp"
+        android:fontFamily="@font/inter_semibold"
+        app:layout_constraintStart_toEndOf="@id/from_month_txt"
+        app:layout_constraintTop_toTopOf="@id/from_month_txt"
+        app:layout_constraintBottom_toBottomOf="@id/from_month_txt"
+      app:layout_constraintTop_toBottomOf="@id/from_month_txt"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingVertical="@dimen/_3sdp"
+        android:paddingHorizontal="10dp"
+        android:textSize="14sp"
+        android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_down_24"
+        app:layout_constraintTop_toBottomOf="@id/wallet_passbook_layout"
+        android:text="DD/MM/YY"
+        android:id="@+id/to_txt"
+        android:fontFamily="@font/inter"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:background="@drawable/allorder_draw"
+        android:layout_marginStart="@dimen/_10sdp"
+        app:layout_constraintBottom_toBottomOf="@id/from_month_txt"
+        app:layout_constraintTop_toTopOf="@id/from_month_txt"
+        app:layout_constraintStart_toEndOf="@id/to_txts"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycleview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_15sdp"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:layout_constraintStart_toStartOf="@id/from_month_txt"
+        app:layout_constraintTop_toBottomOf="@id/from_month_txt"
+        tools:itemCount="6"
+        tools:listitem="@layout/transcition_details" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

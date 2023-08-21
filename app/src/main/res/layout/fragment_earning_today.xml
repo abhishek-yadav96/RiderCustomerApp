@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".EarningTodayFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/earning_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+                android:paddingVertical="@dimen/_5sdp"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/ic_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginTop="26dp"
+                    android:background="@drawable/vector__66_"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/earning"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_13sdp"
+                    android:fontFamily="@font/inter_semibold"
+                    android:text="Earnings"
+                    android:textColor="@color/black"
+                    android:textSize="24sp"
+                    app:layout_constraintBottom_toBottomOf="@id/ic_back"
+                    app:layout_constraintStart_toEndOf="@id/ic_back"
+                    app:layout_constraintTop_toTopOf="@id/ic_back" />
+
+
+
+                <TextView
+                    android:id="@+id/help_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter_semibold"
+                    android:text="Custom view"
+                    android:textColor="#0F6FB5"
+                    android:textSize="12sp"
+                    android:layout_marginEnd="@dimen/_18sdp"
+                    app:layout_constraintBottom_toBottomOf="@id/earning"
+                    app:layout_constraintTop_toTopOf="@id/earning"
+                   app:layout_constraintEnd_toEndOf="parent"
+                />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1sdp"
+                    android:background="
+                   #F1F1F1"
+                    android:id="@+id/view3"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    app:layout_constraintTop_toBottomOf="@id/earning"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_marginHorizontal="@dimen/_13sdp"
+                    android:layout_marginTop="@dimen/_14sdp"
+                    android:background="@drawable/payout_draw"
+                    android:orientation="horizontal"
+                    app:layout_constraintStart_toStartOf="@+id/earning"
+                    app:layout_constraintTop_toBottomOf="@id/view3">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_weight="1"
+                         android:layout_gravity="center"
+                        android:textAlignment="center"
+                        android:background="@drawable/today_draw"
+                        android:fontFamily="@font/inter_semibold"
+                        android:gravity="center"
+                        android:text="Today"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_weight="1"
+                        android:textAlignment="center"
+                        android:layout_gravity="center"
+                         android:fontFamily="@font/inter_semibold"
+                        android:gravity="center"
+                        android:paddingVertical="@dimen/_10sdp"
+                        android:text="History"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <TextView
+                android:id="@+id/rupay_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_13sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:fontFamily="@font/inter_semibold"
+                android:text="₹24.63"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/earning_layout" />
+
+            <TextView
+                android:id="@+id/earning_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter_semibold"
+                android:text="Total Earnings"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@id/rupay_txt"
+                app:layout_constraintTop_toBottomOf="@id/rupay_txt" />
+
+            <ImageView
+                android:id="@+id/ic_close"
+                android:layout_width="13dp"
+                android:layout_height="13dp"
+                android:layout_marginStart="3dp"
+                android:background="@drawable/close_drwable"
+                android:padding="3dp"
+                android:src="@drawable/ic_baseline_arrow_forward_ios_24"
+                app:layout_constraintBottom_toBottomOf="@id/earning_txt"
+                app:layout_constraintStart_toEndOf="@id/earning_txt"
+                app:layout_constraintTop_toBottomOf="@id/rupay_txt"
+                app:layout_constraintTop_toTopOf="@id/earning_txt" />
+
+            <TextView
+                android:id="@+id/rate_card_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_55sdp"
+                android:layout_marginTop="38dp"
+                android:fontFamily="@font/inter_semibold"
+                android:text="Rate Card"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/earning_txt" />
+
+            <TextView
+                android:id="@+id/check_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter_semibold"
+                android:text="Check your payment structure"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@id/rate_card_txt"
+                app:layout_constraintTop_toBottomOf="@id/rate_card_txt" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_18sdp"
+                android:background="@drawable/group_33832"
+                app:layout_constraintBottom_toBottomOf="@id/check_txt"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rate_card_txt"
+                app:layout_constraintTop_toTopOf="@id/rate_card_txt" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="77dp"
+                android:layout_marginTop="22dp"
+                android:layout_marginEnd="15dp"
+                android:background="#F1F1F1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/check_txt" />
+
+            <ImageView
+                android:id="@+id/ic_image"
+                android:layout_width="62dp"
+                android:layout_height="55dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/ia_document_009_1"
+                app:layout_constraintStart_toStartOf="@id/rupay_txt"
+                app:layout_constraintTop_toBottomOf="@id/view" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter_semibold"
+                android:text="Guidelines for doing orders"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:layout_marginStart="@dimen/_5sdp"
+                app:layout_constraintBottom_toBottomOf="@id/ic_image"
+                app:layout_constraintStart_toEndOf="@id/ic_image"
+                app:layout_constraintStart_toStartOf="@id/rate_card_txt"
+                app:layout_constraintTop_toBottomOf="@id/ic_image"
+                app:layout_constraintTop_toTopOf="@id/ic_image" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_18sdp"
+                android:fontFamily="@font/inter_semibold"
+                android:text="Know More"
+                android:textColor="#0F6FB5"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@id/ic_image"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ic_image"
+                app:layout_constraintTop_toTopOf="@id/ic_image" />
+
+            <LinearLayout
+                android:id="@+id/linear_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_13sdp"
+                android:layout_marginTop="21dp"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@id/ic_image">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/femaledraw"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_8sdp"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/inter_semibold"
+                        android:text="9"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_8sdp"
+                        android:fontFamily="@font/inter_semibold"
+                        android:text="Delivered"
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/femaledraw"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_8sdp"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/inter_semibold"
+                        android:text="12"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_8sdp"
+                        android:fontFamily="@font/inter_semibold"
+                        android:text="Skipped"
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/femaledraw"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="13dp"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/inter_semibold"
+                        android:text="4"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="13dp"
+                        android:fontFamily="@font/inter_semibold"
+                        android:text="Cancelled"
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/incesntive_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_13sdp"
+                android:layout_marginTop="28dp"
+                android:background="@drawable/incestive_draw"
+                android:paddingVertical="5dp"
+                app:layout_constraintEnd_toEndOf="@+id/linear_layout"
+                app:layout_constraintStart_toStartOf="@+id/linear_layout"
+                app:layout_constraintTop_toBottomOf="@id/linear_layout">
+
+                <TextView
+                    android:id="@+id/incestive_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:fontFamily="@font/inter_semibold"
+                    android:paddingVertical="10dp"
+                    android:text="Incentives &amp; Bonus"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/ic_downarray"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/ic_baseline_keyboard_arrow_down_24"
+                    app:layout_constraintBottom_toBottomOf="@id/incestive_txt"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/incestive_txt" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="45dp"
+                    android:fontFamily="@font/inter_semibold"
+                    android:text="₹0.0"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@id/incestive_txt"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/incestive_txt" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <TextView
+                android:id="@+id/transcition_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="27dp"
+                android:fontFamily="@font/inter_semibold"
+                android:text="Transaction History"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@+id/incesntive_layout"
+                app:layout_constraintTop_toBottomOf="@id/incesntive_layout" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/filter_button"
+                android:layout_width="wrap_content"
+                android:layout_height="24dp"
+                android:layout_marginTop="14dp"
+                android:background="@drawable/femaledraw"
+                android:fontFamily="@font/inter_semibold"
+                android:gravity="center"
+                android:text="Filter"
+                android:textAllCaps="false"
+                android:textColor="#FA713F"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@+id/transcition_txt"
+                app:layout_constraintTop_toBottomOf="@id/transcition_txt" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="wrap_content"
+                android:layout_height="24dp"
+                android:layout_marginStart="16dp"
+                android:background="@drawable/filters_draw"
+                android:gravity="center"
+                android:drawableEnd="@drawable/ic_baseline_close_24"
+                android:paddingEnd="5dp"
+                android:paddingStart="@dimen/_5sdp"
+                android:text="All Transactions"
+                android:textAllCaps="false"
+                android:drawablePadding="@dimen/_3sdp"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@id/filter_button"
+                app:layout_constraintStart_toEndOf="@id/filter_button"
+                app:layout_constraintTop_toBottomOf="@id/filter_button"
+                app:layout_constraintTop_toTopOf="@id/filter_button" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycleview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:layout_constraintStart_toStartOf="@id/filter_button"
+                app:layout_constraintTop_toBottomOf="@id/filter_button"
+                tools:itemCount="1"
+                tools:listitem="@layout/earningdegin" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".PersonaDetailsFragment">
+   <androidx.core.widget.NestedScrollView
+       android:id="@+id/container"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:fillViewport="true"
+       android:isScrollContainer="true"
+       app:layout_constraintBottom_toTopOf="@+id/bottomContainer"
+       app:layout_constraintTop_toTopOf="parent"
+       app:layout_constraintLeft_toLeftOf="parent"
+       app:layout_constraintRight_toRightOf="parent">
+
+      <androidx.constraintlayout.widget.ConstraintLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent">
+
+   <ImageView
+       android:id="@+id/ic_back_icon"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginStart="@dimen/_15sdp"
+       android:layout_marginTop="@dimen/_15sdp"
+       android:background="@drawable/vector__66_"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toTopOf="parent" />
+
+   <TextView
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="@string/help"
+       app:layout_constraintEnd_toEndOf="parent"
+       android:textSize="12sp"
+       android:drawablePadding="@dimen/_5sdp"
+       android:drawableStart="@drawable/vector__39_"
+       android:layout_marginEnd="@dimen/_15sdp"
+       android:textColor="#0F6FB5"
+       android:fontFamily="@font/inter_semibold"
+       app:layout_constraintBottom_toBottomOf="@id/ic_back_icon"
+       app:layout_constraintTop_toTopOf="@id/ic_back_icon"/>
+
+
+         <TextView
+             android:id="@+id/personaldetails"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_marginTop="@dimen/_10sdp"
+             android:fontFamily="@font/inter_semibold"
+             android:text="Personal Verification"
+             android:textColor="@color/black"
+             android:textSize="32dp"
+             app:layout_constraintStart_toStartOf="@+id/ic_back_icon"
+             app:layout_constraintTop_toBottomOf="@id/ic_back_icon" />
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+   android:text="Enter Name"
+   android:textSize="12sp"
+   android:id="@+id/name_txt"
+   android:layout_marginTop="@dimen/_18sdp"
+   app:layout_constraintTop_toBottomOf="@id/personaldetails"
+   android:fontFamily="@font/inter_semibold"
+   android:textColor="@color/black"
+   app:layout_constraintStart_toStartOf="@id/personaldetails"/>
+   <EditText
+       android:id="@+id/search"
+       android:layout_width="match_parent"
+       android:layout_height="59dp"
+       android:layout_marginHorizontal="@dimen/_15sdp"
+       android:layout_marginTop="@dimen/_8sdp"
+       android:background="@drawable/border"
+       android:fontFamily="@font/inter_semibold"
+       android:hint="First name as per DL"
+       android:padding="10dp"
+       android:paddingStart="18dp"
+       android:singleLine="true"
+       android:textColor="#676767"
+       android:textSize="14sp"
+       app:layout_constraintStart_toStartOf="@+id/personaldetails"
+       app:layout_constraintTop_toBottomOf="@id/name_txt" />
+
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="Enter Middle Name"
+             android:textSize="12sp"
+             android:id="@+id/middle_name_txt"
+             android:layout_marginTop="@dimen/_15sdp"
+             app:layout_constraintTop_toBottomOf="@id/search"
+             android:fontFamily="@font/inter_semibold"
+             android:textColor="@color/black"
+             app:layout_constraintStart_toStartOf="@id/personaldetails"/>
+   <EditText
+       android:id="@+id/middlename"
+       android:layout_width="match_parent"
+       android:layout_height="59dp"
+       android:layout_marginHorizontal="@dimen/_15sdp"
+       android:layout_marginTop="16dp"
+       android:background="@drawable/border"
+       android:fontFamily="@font/inter_semibold"
+       android:hint="Middle name"
+       android:padding="10dp"
+       android:paddingStart="18dp"
+       android:singleLine="true"
+       android:textColor="#676767"
+       android:textSize="14sp"
+       app:layout_constraintEnd_toEndOf="@+id/search"
+       app:layout_constraintStart_toStartOf="@+id/search"
+       app:layout_constraintTop_toBottomOf="@id/middle_name_txt" />
+
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="Enter Last Name"
+             android:textSize="12sp"
+             android:id="@+id/last_name_txt"
+             android:layout_marginTop="@dimen/_15sdp"
+             app:layout_constraintTop_toBottomOf="@id/middlename"
+             android:fontFamily="@font/inter_semibold"
+             android:textColor="@color/black"
+             app:layout_constraintStart_toStartOf="@id/personaldetails"/>
+   <EditText
+       android:id="@+id/lastname"
+       android:layout_width="match_parent"
+       android:layout_height="59dp"
+       android:layout_marginHorizontal="@dimen/_15sdp"
+       android:layout_marginTop="16dp"
+       android:background="@drawable/border"
+       android:fontFamily="@font/inter_semibold"
+       android:hint="Last name"
+       android:padding="10dp"
+       android:paddingStart="18dp"
+       android:singleLine="true"
+       android:textColor="#676767"
+       android:textSize="14sp"
+       app:layout_constraintEnd_toEndOf="@+id/middlename"
+       app:layout_constraintStart_toStartOf="@+id/middlename"
+       app:layout_constraintTop_toBottomOf="@id/last_name_txt" />
+
+
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="Enter your license number"
+             android:textSize="12sp"
+             android:id="@+id/license_no_txt"
+             android:layout_marginTop="@dimen/_15sdp"
+             app:layout_constraintTop_toBottomOf="@id/lastname"
+             android:fontFamily="@font/inter_semibold"
+             android:textColor="@color/black"
+             app:layout_constraintStart_toStartOf="@id/personaldetails"/>
+   <EditText
+       android:id="@+id/dob"
+       android:layout_width="match_parent"
+       android:layout_height="59dp"
+       android:layout_marginHorizontal="@dimen/_13sdp"
+       android:layout_marginTop="16dp"
+       android:background="@drawable/border"
+       android:fontFamily="@font/inter_semibold"
+       android:hint="License Number"
+       android:padding="10dp"
+       android:paddingStart="18dp"
+       android:paddingEnd="20dp"
+       android:singleLine="true"
+       android:textColor="#676767"
+       android:textSize="14sp"
+       app:layout_constraintEnd_toEndOf="@+id/lastname"
+       app:layout_constraintStart_toStartOf="@+id/lastname"
+       app:layout_constraintTop_toBottomOf="@id/license_no_txt" />
+
+
+         <TextView
+             android:id="@+id/gender"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_marginTop="@dimen/_20sdp"
+             android:fontFamily="@font/inter_semibold"
+             android:text="Gender"
+             android:textColor="@color/black"
+             android:textSize="14sp"
+             app:layout_constraintStart_toStartOf="@+id/license_no_txt"
+             app:layout_constraintTop_toBottomOf="@id/dob" />
+
+   <LinearLayout
+       android:id="@+id/linnerlayout"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_marginHorizontal="@dimen/_15sdp"
+       android:layout_marginTop="9dp"
+       android:orientation="horizontal"
+       app:layout_constraintStart_toStartOf="@+id/gender"
+       app:layout_constraintTop_toBottomOf="@id/gender">
+
+      <androidx.appcompat.widget.AppCompatButton
+          android:layout_width="wrap_content"
+          android:layout_height="59dp"
+          android:layout_weight="1"
+          android:background="@drawable/maledraw"
+          android:fontFamily="@font/inter_semibold"
+          android:gravity="center"
+          android:padding="5dp"
+          android:text="Male"
+          android:textAlignment="center"
+          android:textAllCaps="false"
+          android:textColor="@color/white"
+          android:textSize="14sp" />
+
+      <androidx.appcompat.widget.AppCompatButton
+          android:layout_width="wrap_content"
+          android:layout_height="59dp"
+          android:layout_marginStart="14dp"
+          android:layout_weight="1"
+          android:background="@drawable/border"
+          android:fontFamily="@font/inter_semibold"
+          android:gravity="center"
+          android:padding="5dp"
+          android:text="Female"
+          android:textAlignment="center"
+          android:textAllCaps="false"
+          android:textColor="@color/black"
+          android:textSize="14sp" />
+
+      <androidx.appcompat.widget.AppCompatButton
+          android:layout_width="wrap_content"
+          android:layout_height="59dp"
+          android:layout_marginStart="14dp"
+          android:layout_weight="1"
+          android:background="@drawable/border"
+          android:fontFamily="@font/inter_semibold"
+          android:gravity="center"
+          android:padding="5dp"
+          android:text="Other"
+          android:textAllCaps="false"
+          android:textColor="@color/black"
+          android:textSize="14sp" />
+   </LinearLayout>
+
+   <androidx.appcompat.widget.AppCompatButton
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_marginHorizontal="@dimen/_13sdp"
+       android:layout_marginTop="145dp"
+       android:background="@drawable/buttondegins"
+       android:padding="15dp"
+       android:text="Submit"
+       android:gravity="center"
+       app:layout_constraintBottom_toBottomOf="parent"
+       android:textAlignment="center"
+       android:textAllCaps="false"
+       android:textColor="@color/white"
+       android:textSize="20sp"
+       app:layout_constraintEnd_toEndOf="@+id/linnerlayout"
+       app:layout_constraintStart_toStartOf="@+id/linnerlayout"
+       app:layout_constraintTop_toBottomOf="@id/linnerlayout" />
+
+
+      </androidx.constraintlayout.widget.ConstraintLayout>
+   </androidx.core.widget.NestedScrollView>
+
+   <LinearLayout
+       android:id="@+id/bottomContainer"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       app:layout_constraintBottom_toBottomOf="parent"
+       app:layout_constraintRight_toRightOf="parent"
+       android:orientation="horizontal"
+       android:gravity="end">
+
+   </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

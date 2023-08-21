@@ -1,0 +1,485 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".RiderEarningFilterFragment">
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:elevation="5dp"
+        android:padding="10dp"
+        android:id="@+id/firstlayout"
+        app:layout_constraintTop_toTopOf="parent">
+<ImageView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    android:layout_marginTop="26dp"
+    android:layout_marginStart="13dp"
+    android:id="@+id/image"
+    android:background="@drawable/ic_baseline_arrow_back_ios_new_24"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Filters"
+            android:fontFamily="@font/inter_semibold"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="@id/image"
+            app:layout_constraintTop_toTopOf="@id/image"
+            android:layout_marginStart="11dp"
+            app:layout_constraintStart_toEndOf="@id/image"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/secondlayout"
+    app:layout_constraintTop_toBottomOf="@id/firstlayout">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Time"
+        android:textSize="20sp"
+        android:id="@+id/time"
+        android:layout_marginTop="24dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="23dp"
+        android:fontFamily="@font/inter_semibold"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Yesterday"
+    android:textSize="16sp"
+    android:textColor="#FA713F"
+    android:id="@+id/yestarday"
+    android:fontFamily="@font/inter_semibold"
+    app:layout_constraintStart_toStartOf="@id/time"
+    android:layout_marginTop="26dp"
+    app:layout_constraintTop_toBottomOf="@id/time"/>
+
+    <CheckBox
+        android:layout_width="19dp"
+        android:layout_height="19dp"
+        android:id="@+id/checkbox"
+        android:layout_marginEnd="19dp"
+        android:background="@drawable/checkbox_draw"
+        app:layout_constraintBottom_toBottomOf="@id/yestarday"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/yestarday"
+        app:layout_constraintTop_toTopOf="@id/yestarday"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#F1F1F1"
+        android:layout_marginTop="13dp"
+        android:id="@+id/view"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="22dp"
+        android:layout_marginEnd="19dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/yestarday"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Date Wise"
+        android:textSize="16sp"
+        android:textColor="#686868"
+        android:id="@+id/datewise"
+        android:fontFamily="@font/inter_semibold"
+        app:layout_constraintStart_toStartOf="@id/time"
+        android:layout_marginTop="13dp"
+        app:layout_constraintTop_toBottomOf="@id/view"/>
+
+    <CheckBox
+        android:layout_width="19dp"
+        android:layout_height="19dp"
+        android:id="@+id/checkbox1"
+        android:layout_marginEnd="19dp"
+        android:background="@drawable/checkbox_draw"
+        app:layout_constraintBottom_toBottomOf="@id/datewise"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/datewise"
+        app:layout_constraintTop_toTopOf="@id/datewise"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#F1F1F1"
+        android:layout_marginTop="13dp"
+        android:id="@+id/view1"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="22dp"
+        android:layout_marginEnd="19dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/datewise"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="This week"
+        android:textSize="16sp"
+        android:textColor="#686868"
+        android:id="@+id/thisweek"
+        android:fontFamily="@font/inter_semibold"
+        app:layout_constraintStart_toStartOf="@id/time"
+        android:layout_marginTop="13dp"
+        app:layout_constraintTop_toBottomOf="@id/view1"/>
+
+    <CheckBox
+        android:layout_width="19dp"
+        android:layout_height="19dp"
+        android:id="@+id/checkbox2"
+        android:layout_marginEnd="19dp"
+        app:layout_constraintBottom_toBottomOf="@id/thisweek"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/thisweek"
+        app:layout_constraintTop_toTopOf="@id/thisweek"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#F1F1F1"
+        android:layout_marginTop="13dp"
+        android:id="@+id/view2"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="22dp"
+        android:layout_marginEnd="19dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/thisweek"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Last Week"
+        android:textSize="16sp"
+        android:textColor="#686868"
+        android:id="@+id/lastweek"
+        android:fontFamily="@font/inter_semibold"
+        app:layout_constraintStart_toStartOf="@id/time"
+        android:layout_marginTop="13dp"
+        app:layout_constraintTop_toBottomOf="@id/view2"/>
+
+    <CheckBox
+        android:layout_width="19dp"
+        android:layout_height="19dp"
+        android:id="@+id/checkbox3"
+        android:layout_marginEnd="19dp"
+        app:layout_constraintBottom_toBottomOf="@id/lastweek"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lastweek"
+        app:layout_constraintTop_toTopOf="@id/lastweek"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#F1F1F1"
+        android:layout_marginTop="13dp"
+        android:id="@+id/view3"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="22dp"
+        android:layout_marginEnd="19dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lastweek"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="This Month"
+        android:textSize="16sp"
+        android:textColor="#686868"
+        android:id="@+id/thismonth"
+        android:fontFamily="@font/inter_semibold"
+        app:layout_constraintStart_toStartOf="@id/time"
+        android:layout_marginTop="13dp"
+        app:layout_constraintTop_toBottomOf="@id/view3"/>
+
+    <CheckBox
+        android:layout_width="19dp"
+        android:layout_height="19dp"
+        android:id="@+id/checkbox4"
+        android:layout_marginEnd="19dp"
+        app:layout_constraintBottom_toBottomOf="@id/thismonth"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/thismonth"
+        app:layout_constraintTop_toTopOf="@id/thismonth"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#F1F1F1"
+        android:layout_marginTop="13dp"
+        android:id="@+id/view4"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="22dp"
+        android:layout_marginEnd="19dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/thismonth"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Last Month"
+        android:textSize="16sp"
+        android:textColor="#686868"
+        android:id="@+id/lastmonth"
+        android:fontFamily="@font/inter_semibold"
+        app:layout_constraintStart_toStartOf="@id/time"
+        android:layout_marginTop="13dp"
+        app:layout_constraintTop_toBottomOf="@id/view4"/>
+
+    <CheckBox
+        android:layout_width="19dp"
+        android:layout_height="19dp"
+        android:id="@+id/checkbox5"
+        android:layout_marginEnd="19dp"
+        app:layout_constraintBottom_toBottomOf="@id/lastmonth"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lastmonth"
+        app:layout_constraintTop_toTopOf="@id/lastmonth"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#F1F1F1"
+        android:layout_marginTop="13dp"
+        android:id="@+id/view5"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="22dp"
+        android:layout_marginEnd="19dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lastmonth"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="This Year"
+        android:textSize="16sp"
+        android:textColor="#686868"
+        android:id="@+id/thisyear"
+        android:fontFamily="@font/inter_semibold"
+        app:layout_constraintStart_toStartOf="@id/time"
+        android:layout_marginTop="13dp"
+        app:layout_constraintTop_toBottomOf="@id/view5"/>
+
+    <CheckBox
+        android:layout_width="19dp"
+        android:layout_height="19dp"
+        android:id="@+id/checkbox6"
+        android:layout_marginEnd="19dp"
+        app:layout_constraintBottom_toBottomOf="@id/thisyear"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/thisyear"
+        app:layout_constraintTop_toTopOf="@id/thisyear"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#F1F1F1"
+        android:layout_marginTop="13dp"
+        android:id="@+id/view6"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="22dp"
+        android:layout_marginEnd="19dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/thisyear"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Last Year"
+        android:textSize="16sp"
+        android:textColor="#686868"
+        android:id="@+id/lastyear"
+        android:fontFamily="@font/inter_semibold"
+        app:layout_constraintStart_toStartOf="@id/time"
+        android:layout_marginTop="13dp"
+        app:layout_constraintTop_toBottomOf="@id/view6"/>
+
+    <CheckBox
+        android:layout_width="19dp"
+        android:layout_height="19dp"
+        android:id="@+id/checkbox8"
+        android:layout_marginEnd="19dp"
+        app:layout_constraintBottom_toBottomOf="@id/lastyear"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lastyear"
+        app:layout_constraintTop_toTopOf="@id/lastyear"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Status"
+    android:textSize="20sp"
+    android:layout_marginTop="46dp"
+    android:layout_marginStart="23dp"
+    android:textColor="@color/black"
+    android:id="@+id/status"
+    android:fontFamily="@font/inter_semibold"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/secondlayout"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cancelled Orders"
+        android:textSize="16sp"
+        android:textColor="#686868"
+        android:id="@+id/cancelorder"
+        android:fontFamily="@font/inter_semibold"
+        app:layout_constraintStart_toStartOf="@id/status"
+        android:layout_marginTop="26dp"
+        app:layout_constraintTop_toBottomOf="@id/status"/>
+
+    <CheckBox
+        android:layout_width="19dp"
+        android:layout_height="19dp"
+        android:id="@+id/checkbox10"
+        android:layout_marginEnd="19dp"
+        app:layout_constraintBottom_toBottomOf="@id/cancelorder"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cancelorder"
+        app:layout_constraintTop_toTopOf="@id/cancelorder"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#F1F1F1"
+        android:layout_marginTop="13dp"
+        android:id="@+id/view11"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="22dp"
+        android:layout_marginEnd="19dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cancelorder"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Missed Orders"
+        android:textSize="16sp"
+        android:textColor="#686868"
+        android:id="@+id/misslorder"
+        android:fontFamily="@font/inter_semibold"
+        app:layout_constraintStart_toStartOf="@id/status"
+        android:layout_marginTop="13dp"
+        app:layout_constraintTop_toBottomOf="@id/view11"/>
+
+    <CheckBox
+        android:layout_width="19dp"
+        android:layout_height="19dp"
+        android:id="@+id/checkbox11"
+        android:layout_marginEnd="19dp"
+        app:layout_constraintBottom_toBottomOf="@id/misslorder"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/misslorder"
+        app:layout_constraintTop_toTopOf="@id/misslorder"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#F1F1F1"
+        android:layout_marginTop="13dp"
+        android:id="@+id/view10"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="22dp"
+        android:layout_marginEnd="19dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/misslorder"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delivered Orders"
+        android:textSize="16sp"
+        android:textColor="#686868"
+        android:id="@+id/deliveredorder"
+        android:fontFamily="@font/inter_semibold"
+        app:layout_constraintStart_toStartOf="@id/status"
+        android:layout_marginTop="13dp"
+        app:layout_constraintTop_toBottomOf="@id/view10"/>
+
+    <CheckBox
+        android:layout_width="19dp"
+        android:layout_height="19dp"
+        android:id="@+id/checkbox14"
+        android:layout_marginEnd="19dp"
+        app:layout_constraintBottom_toBottomOf="@id/deliveredorder"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/deliveredorder"
+        app:layout_constraintTop_toTopOf="@id/deliveredorder"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#F1F1F1"
+        android:layout_marginTop="13dp"
+        android:id="@+id/view12"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="22dp"
+        android:layout_marginEnd="19dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/deliveredorder"/>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="15dp"
+    android:layout_marginTop="62dp"
+    android:layout_marginBottom="90dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/view12"
+    android:orientation="horizontal">
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reset"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:background="@drawable/femaledraw"
+        android:fontFamily="@font/inter_semibold"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:layout_marginStart="14dp"
+        android:padding="5dp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Apply"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textAllCaps="false"
+        android:gravity="center"
+        android:background="@drawable/buttondegins"
+        android:fontFamily="@font/inter_semibold"
+        android:layout_weight="1"
+        android:layout_marginStart="19dp"
+        android:padding="5dp"/>
+
+
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/navgraphs"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.ridercustomerapp.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home"
+        >
+        <action
+            android:id="@+id/action_homeFragment_to_profilesFragment4"
+            app:destination="@id/profilesFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_verificationFragment"
+            app:destination="@id/verificationFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_earningOrderFragment"
+            app:destination="@id/earningOrderFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_selectVehicleFragment"
+            app:destination="@id/selectVehicleFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_liveOrderFragment"
+            app:destination="@id/liveOrderFragment" />
+
+
+    </fragment>
+
+    <fragment
+            android:id="@+id/incentiveFragment"
+            android:name="com.ridercustomerapp.IncentiveFragment"
+            android:label="fragment_incentive"
+            tools:layout="@layout/fragment_incentive" />
+        <fragment
+            android:id="@+id/supportFragment"
+            android:name="com.ridercustomerapp.SupportFragment"
+            android:label="fragment_support"
+            tools:layout="@layout/fragment_support" />
+
+
+    <action
+            android:id="@+id/action_homeFragment_to_vehicleDetailsFragment"
+            app:destination="@id/vehicleDetailsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_riderEarningFilterFragment"
+            app:destination="@id/riderEarningFilterFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_profilesFragment"
+            app:destination="@id/profilesFragment" />
+    <action
+            android:id="@+id/action_homeFragment_to_trackingFragment"
+            app:destination="@id/trackingFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_addressFragment"
+            app:destination="@id/addressFragment" />
+
+
+
+
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.ridercustomerapp.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/vehicleDetailsFragment"
+        android:name="com.ridercustomerapp.VehicleDetailsFragment"
+        android:label="fragment_vehicle_details"
+        tools:layout="@layout/fragment_vehicle_details" />
+    <fragment
+        android:id="@+id/DLVerificationFragment"
+        android:name="com.ridercustomerapp.DLVerificationFragment"
+        android:label="fragment_d_l_verification"
+        tools:layout="@layout/fragment_d_l_verification" />
+    <fragment
+        android:id="@+id/riderEarningFilterFragment"
+        android:name="com.ridercustomerapp.RiderEarningFilterFragment"
+        android:label="fragment_rider_earning_filter"
+        tools:layout="@layout/fragment_rider_earning_filter" />
+    <fragment
+        android:id="@+id/profilesFragment"
+        android:name="com.ridercustomerapp.ProfilesFragment"
+        android:label="fragment_profiles"
+        tools:layout="@layout/fragment_profiles" >
+        <action
+            android:id="@+id/action_profilesFragment_to_profileidcardFragment"
+            app:destination="@id/profileidcardFragment" />
+        <action
+            android:id="@+id/action_profilesFragment_to_documentDetailsFragment"
+            app:destination="@id/documentDetailsFragment" />
+        <action
+            android:id="@+id/action_profilesFragment_to_documentDetailsFragment2"
+            app:destination="@id/documentDetailsFragment" />
+        <action
+            android:id="@+id/action_profilesFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_profilesFragment_to_languageSettingFragment"
+            app:destination="@id/languageSettingFragment" />
+        <action
+            android:id="@+id/action_profilesFragment_to_myPerformanceFragment"
+            app:destination="@id/myPerformanceFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileidcardFragment"
+        android:name="com.ridercustomerapp.ProfileidcardFragment"
+        android:label="fragment_profileidcard"
+        tools:layout="@layout/fragment_profileidcard" />
+    <fragment
+        android:id="@+id/panVerificationFragment"
+        android:name="com.ridercustomerapp.PanVerificationFragment"
+        android:label="fragment_pan_verification"
+        tools:layout="@layout/fragment_pan_verification" />
+    <fragment
+        android:id="@+id/documentDetailsFragment"
+        android:name="com.ridercustomerapp.DocumentDetailsFragment"
+        android:label="fragment_document_details"
+        tools:layout="@layout/fragment_document_details" >
+        <action
+            android:id="@+id/action_documentDetailsFragment_to_panVerificationFragment"
+            app:destination="@id/panVerificationFragment" />
+        <action
+            android:id="@+id/action_documentDetailsFragment_to_DLVerificationFragment"
+            app:destination="@id/DLVerificationFragment" />
+        <action
+            android:id="@+id/action_documentDetailsFragment_to_aadhaarVerificationFragment"
+            app:destination="@id/aadhaarVerificationFragment" />
+
+        <action
+            android:id="@+id/action_documentDetailsFragment_to_rcVerificationFragment"
+            app:destination="@id/rcVerificationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/aadhaarVerificationFragment"
+        android:name="com.ridercustomerapp.AadhaarVerificationFragment"
+        android:label="AadhaarVerificationFragment" />
+    <fragment
+        android:id="@+id/languageSettingFragment"
+        android:name="com.ridercustomerapp.LanguageSettingFragment"
+        android:label="fragment_language_setting"
+        tools:layout="@layout/fragment_language_setting" >
+        <action
+            android:id="@+id/action_languageSettingFragment_to_appLanguageFragment"
+            app:destination="@id/appLanguageFragment" />
+        <action
+            android:id="@+id/action_languageSettingFragment_to_notificationLanguageFragment"
+            app:destination="@id/notificationLanguageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/myPerformanceFragment"
+        android:name="com.ridercustomerapp.MyPerformanceFragment"
+        android:label="fragment_my_performance"
+        tools:layout="@layout/fragment_my_performance" />
+    <fragment
+        android:id="@+id/rcVerificationFragment"
+        android:name="com.ridercustomerapp.RcVerificationFragment"
+        android:label="RcVerificationFragment" />
+    <fragment
+        android:id="@+id/appLanguageFragment"
+        android:name="com.ridercustomerapp.AppLanguageFragment"
+        android:label="fragment_notification_language"
+        tools:layout="@layout/fragment_notification_language" />
+    <fragment
+        android:id="@+id/notificationLanguageFragment"
+        android:name="com.ridercustomerapp.NotificationLanguageFragment"
+        android:label="NotificationLanguageFragment" />
+    <fragment
+        android:id="@+id/trackingFragment"
+        android:name="com.ridercustomerapp.TrackingFragment"
+        android:label="fragment_tracking"
+        tools:layout="@layout/fragment_tracking" />
+    <fragment
+        android:id="@+id/addressFragment"
+        android:name="com.ridercustomerapp.AddressFragment"
+        android:label="fragment_address"
+        tools:layout="@layout/fragment_address" />
+    <fragment
+        android:id="@+id/servicesFragment"
+        android:name="com.ridercustomerapp.ServicesFragment"
+        android:label="fragment_services"
+        tools:layout="@layout/fragment_services" />
+    <fragment
+        android:id="@+id/walletPassbookFragment"
+        android:name="com.ridercustomerapp.WalletPassbookFragment"
+        android:label="fragment_wallet_passbook"
+        tools:layout="@layout/fragment_wallet_passbook" />
+    <fragment
+        android:id="@+id/gstDetailsFragment"
+        android:name="com.ridercustomerapp.GstDetailsFragment"
+        android:label="fragment_gst_details"
+        tools:layout="@layout/fragment_gst_details" />
+    <fragment
+        android:id="@+id/otpFragment"
+        android:name="com.ridercustomerapp.OtpFragment"
+        android:label="fragment_otp"
+        tools:layout="@layout/fragment_otp" />
+    <fragment
+        android:id="@+id/verificationFragment"
+        android:name="com.ridercustomerapp.VerificationFragment"
+        android:label="fragment_verification"
+        tools:layout="@layout/fragment_verification" >
+        <action
+            android:id="@+id/action_verificationFragment_to_otpFragment"
+            app:destination="@id/otpFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/earningOrderFragment"
+        android:name="com.ridercustomerapp.EarningOrderFragment"
+        android:label="fragment_earning_order"
+        tools:layout="@layout/fragment_earning_order" />
+    <fragment
+        android:id="@+id/selectVehicleFragment"
+        android:name="com.ridercustomerapp.SelectVehicleFragment"
+        android:label="fragment_select_vehicle"
+        tools:layout="@layout/fragment_select_vehicle" />
+    <fragment
+        android:id="@+id/liveOrderFragment"
+        android:name="com.ridercustomerapp.LiveOrderFragment"
+        android:label="fragment_live_order"
+        tools:layout="@layout/fragment_live_order" />
+
+
+</navigation>

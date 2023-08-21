@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".VerificationFragment">
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:isScrollContainer="true"
+        app:layout_constraintBottom_toTopOf="@+id/bottomContainer"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/ic_back_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:background="@drawable/vector__66_"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:drawableStart="@drawable/vector__39_"
+                android:drawablePadding="@dimen/_5sdp"
+                android:fontFamily="@font/inter_semibold"
+                android:text="@string/help"
+                android:textColor="#0F6FB5"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@id/ic_back_icon"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/ic_back_icon" />
+
+            <TextView
+                android:id="@+id/number_verification_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/inter_semibold"
+                android:text="Mobile Number Verification"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="@+id/ic_back_icon"
+                app:layout_constraintTop_toBottomOf="@id/ic_back_icon" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_22sdp"
+        android:background="@drawable/border"
+        android:id="@+id/number_layout"
+        android:paddingVertical="@dimen/_15sdp"
+        app:layout_constraintStart_toStartOf="@+id/number_verification_txt"
+        app:layout_constraintTop_toBottomOf="@id/number_verification_txt">
+
+        <TextView
+            android:id="@+id/number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_9sdp"
+            android:drawableEnd="@drawable/vector__64_"
+            android:drawablePadding="@dimen/_5sdp"
+            android:fontFamily="@font/inter_semibold"
+            android:text="91"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="1dp"
+            android:layout_height="14dp"
+            android:layout_marginStart="9dp"
+            android:background="#D9D9D9"
+            app:layout_constraintBottom_toBottomOf="@id/number"
+            app:layout_constraintStart_toEndOf="@id/number"
+            app:layout_constraintTop_toTopOf="@id/number" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_50sdp"
+            android:background="#F6F6F6"
+            android:fontFamily="@font/inter_semibold"
+            android:hint="Enter a number"
+            android:inputType="number"
+            android:maxLength="10"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@id/number"
+            app:layout_constraintStart_toEndOf="@id/number"
+            app:layout_constraintTop_toTopOf="@id/number" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:id="@+id/taking_order"
+        android:textColor="@color/black"
+        android:fontFamily="@font/inter_semibold"
+        android:layout_marginTop="@dimen/_8sdp"
+        app:layout_constraintStart_toStartOf="@id/number_verification_txt"
+        app:layout_constraintTop_toBottomOf="@id/number_layout"
+        android:text="Enter your main number to be used taking orders"/>
+    <CheckBox
+        android:layout_width="@dimen/_15sdp"
+        android:layout_height="@dimen/_15sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="@dimen/_22sdp"
+        android:id="@+id/checkbox"
+        app:layout_constraintStart_toStartOf="@id/number_verification_txt"
+        app:layout_constraintBottom_toTopOf="@id/verify_button1"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text3"
+        app:layout_constraintStart_toEndOf="@id/checkbox"
+        app:layout_constraintTop_toBottomOf="@id/checkbox"
+        app:layout_constraintTop_toTopOf="@id/checkbox"
+        android:layout_marginStart="@dimen/_5sdp"
+        app:layout_constraintBottom_toBottomOf="@id/checkbox"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/verify_button1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_13sdp"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/buttondegins"
+        android:gravity="center"
+        android:paddingVertical="@dimen/_15sdp"
+        android:text="Verify"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/checkbox" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <LinearLayout
+        android:id="@+id/bottomContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:orientation="horizontal"
+        android:gravity="end">
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

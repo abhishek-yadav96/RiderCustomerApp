@@ -1,0 +1,76 @@
+<resources>
+    <string name="app_name">Rider Customer App</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="verify_submit"><![CDATA[Verify & Submit]]></string>
+
+
+    <string name="best_for_delivering_documents_ndaily_essentials"><![CDATA[Best for delivering documents & \ndaily essentials]]></string>
+    <string name="documents_details"><![CDATA[Documents & Details]]></string>
+    <string name="ratings">Ratings</string>
+    <string name="help">Help</string>
+    <string name="custom_title" />
+
+
+    <string name="app_name1">MonthYearPicker Example</string>
+    <string name="show_datepicker">Click to show Picker</string>
+    <string name="current_select">Values select:</string>
+    <string name="with_ranges">Show with date ranges</string>
+    <string name="custom_title1">Custom title</string>
+    <string name="short_months">Short Months</string>
+
+
+    <string name="text"><font color="#EF2525">Rs. 50 </font><font color="#000000">will be charged in order to cancel\nthis order. Are you sure to cancel?</font>
+    </string>
+
+    <string name="text1"><font color="#EF2525">Rs. 50 </font><font color="#000000">will be charged in order to cancel\nthis order because order has been already \npicked up and it has to be returned.</font>
+    </string>
+
+    <string name="secondname1">
+    <font color="#000000"><b>I have read the  of Handover</b></font> <font color="#0F6FB5"><b>T&amp;Cs</b></font>
+    </string>
+
+    <string name="text3"><font color="#494949"><b>I have read the</b> </font><font color="#0F6FB5"><b>T&amp;Cs</b> </font><font color="#494949"><b> of Handover</b></font> </string>
+
+    <string-array name="month">
+
+        <item>January</item>
+        <item>February</item>
+        <item>March</item>
+        <item>April</item>
+        <item>May</item>
+        <item>June</item>
+        <item>July</item>
+        <item>August</item>
+        <item>September</item>
+        <item>October</item>
+        <item>November</item>
+        <item>December</item>
+    </string-array>
+
+    <string-array name="year">
+        <item>2022</item>
+        <item>2023</item>
+        <item>2024</item>
+        <item>2025</item>
+        <item>2026</item>
+        <item>2027</item>
+        <item>2028</item>
+        <item>2029</item>
+        <item>2030</item>
+        <item>2031</item>
+        <item>2032</item>
+        <item>2033</item>
+        <item>2034</item>
+        <item>2035</item>
+        <item>2036</item>
+        <item>2037</item>
+        <item>2038</item>
+        <item>2039</item>
+        <item>2040</item>
+
+
+    </string-array>
+
+
+</resources>

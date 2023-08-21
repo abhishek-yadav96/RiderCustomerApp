@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:title="Home"
+        android:id="@+id/homeFragment"
+        android:icon="@drawable/selected_icon"
+
+
+        />
+
+    <item android:title="Earnings"
+        android:id="@+id/earningFragment"
+        android:icon="@drawable/vector__32_"
+        />
+
+    <item android:title="Payout"
+        android:id="@+id/incentiveFragment"
+        android:icon="@drawable/vector__33_"
+        />
+    <item android:title="Support"
+        android:icon="@drawable/vector__34_"
+        android:id="@+id/supportFragment"
+        />
+
+
+</menu>
